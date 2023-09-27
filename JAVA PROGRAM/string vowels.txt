@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class RemoveVowels {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        scanner.close();
+
+        String result = removeVowels(input);
+
+        System.out.println("String after removing vowels: " + result);
+    }
+
+    public static String removeVowels(String input) {
+     
+        String vowelsRegex = "[aeiouAEIOU]";
+        
+        
+        String result = input.replaceAll(vowelsRegex, "");
+
+        return result;
+    }
+}
